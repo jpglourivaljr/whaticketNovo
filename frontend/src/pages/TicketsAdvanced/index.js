@@ -11,7 +11,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 import TicketsManagerTabs from "../../components/TicketsManagerTabs/";
 import Ticket from "../../components/Ticket/";
 import TicketAdvancedLayout from "../../components/TicketAdvancedLayout";
-import logo from "../../assets/logo.png"; 
+import logo from "../../assets/purple_2.png"; 
 import { TicketsContext } from "../../context/Tickets/TicketsContext";
 
 import { i18n } from "../../translate/i18n";

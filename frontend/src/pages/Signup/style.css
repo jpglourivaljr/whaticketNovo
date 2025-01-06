@@ -42,9 +42,9 @@ body {
   /* max-height: 100vh; */
 }
 .h4 {
-  caret-color: rgb(52, 137, 255);
-  color: rgb(52, 137, 255);
-  column-rule-color: rgb(52, 137, 255);
+  caret-color: rgb(88, 49, 187);
+  color: rgb(88, 49, 187);
+  column-rule-color: rgb(88, 49, 187);
   font-size: 34px;
   line-height: 41.99px;
   margin: 10px 0 25px;
@@ -85,11 +85,24 @@ body {
 .footer a {
   text-decoration: none;
   cursor: pointer;
-  color: #3489ff;
+  color: #5831bb;
 }
 .footer a:hover {
   text-decoration: underline;
 }
+
+
+a {
+  color: #5831bb ; 
+  transition: color 0.3s ease ; 
+}
+
+/* Cor no hover */
+a:hover {
+  color: rgb(131, 89, 240) ;
+}
+
+
 
 @media screen and (max-width: 320px) {
   .container-img-signup {
@@ -114,7 +127,8 @@ body {
     max-width: 450px;
     max-height: fit-content;
   }
-  .img-signup {
+
+.img-signup {
     width: 499px;
   }
 }

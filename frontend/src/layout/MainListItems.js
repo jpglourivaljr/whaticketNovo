@@ -585,11 +585,12 @@ const MainListItems = (props) => {
         )}
       />
       <li>
-        <ListItem
+      <ListItem
           button
           dense
-          onClick={handleClickLogout}>
-          <ListItemIcon><RotateRight /></ListItemIcon>
+          onClick={handleClickLogout}
+          style={{ color: "white" }}>
+          <ListItemIcon style={{ color: "white" }}><RotateRight /></ListItemIcon>
           <ListItemText primary={i18n.t("mainDrawer.listItems.logout")} />
         </ListItem>
       </li>

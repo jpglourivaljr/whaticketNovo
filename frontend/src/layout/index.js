@@ -36,7 +36,7 @@ import toastError from "../errors/toastError";
 import AnnouncementsPopover from "../components/AnnouncementsPopover";
 import LanguageIcon from '@material-ui/icons/Language';
 
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_pequeno.png";
 import { SocketContext } from "../context/Socket/SocketContext";
 import ChatPopover from "../pages/Chat/ChatPopover";
 
@@ -60,11 +60,11 @@ const useStyles = makeStyles((theme) => ({
     },
     backgroundColor: theme.palette.fancyBackground,
     '& .MuiButton-outlinedPrimary': {
-      color: theme.mode === 'light' ? '#00BFFF' : '#FFF',
-      border: theme.mode === 'light' ? '1px solid rgba(0 124 102)' : '1px solid rgba(255, 255, 255, 0.5)',
+      color: theme.mode === 'light' ? '#4C2A80' : '#FFF',
+      border: theme.mode === 'light' ? '1px solid rgba(166 142 207)' : '1px solid rgba(255, 255, 255, 0.5)',
     },
     '& .MuiTab-textColorPrimary.Mui-selected': {
-      color: theme.mode === 'light' ? '#00BFFF' : '#FFF',
+      color: theme.mode === 'light' ? '#4C2A80' : '#FFF',
     }
   },
   avatar: {
@@ -105,6 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: 36,
+    color: "white",
   },
   menuButtonHidden: {
     display: "none",
@@ -130,7 +131,8 @@ const useStyles = makeStyles((theme) => ({
     ...theme.scrollbarStylesSoft
   },
   iconDrawer: {
-    color: theme.palette.drawerIcons,
+    /* color: theme.palette.drawerIcons, */
+    color: "white",
   },
   drawerPaperClose: {
     overflowX: "hidden",
@@ -385,14 +387,14 @@ const LoggedInLayout = ({ children, themeToggle }) => {
         classes={{
           paper: clsx(
             classes.drawerPaper,
-            !drawerOpen && classes.drawerPaperClose
+            !drawerOpen && classes.drawerPaperClose && classes.menuButtonWhite
           ),
         }}
         open={drawerOpen}
       >
         <div className={classes.toolbarIcon}>
-          {/* <img src={logo} className={classes.logo} alt="logo" /> */}
-          <IconButton className={classes.iconDrawer} onClick={() => setDrawerOpen(!drawerOpen)}>
+           <img src={logo} className={classes.logo} alt="logo" /> {/* icone na barra do menu */}
+          <IconButton className={classes.iconDrawer} onClick={() => setDrawerOpen(!drawerOpen)}> 
             <ChevronLeftIcon />
           </IconButton>
         </div>
@@ -431,15 +433,30 @@ const LoggedInLayout = ({ children, themeToggle }) => {
           <Typography
             component="h2"
             variant="h6"
-            color="inherit"
+            color="white"
             noWrap
             className={classes.title}
           >
-            <img style={{}} src={logo} className={classes.logo} alt="logo" />
+           {/* <img style={{}} src={logo} className={classes.logo} alt="logo" /> */}
+          
+            {/* {greaterThenSm && user?.profile === "admin" && getDateAndDifDays(user?.company?.dueDate).difData < 7 ? ( */}
+            {greaterThenSm && user?.profile === "admin" && user?.company?.dueDate ? (
+              <>
+                Olá <b>{user.name}</b>, Bem vindo a <b>{user?.company?.name}</b>! (Ativo até {dateToClient(user?.company?.dueDate)})
+              </>
+            ) : (
+              <>
+                Olá  <b>{user.name}</b>, Bem vindo a <b>{user?.company?.name}</b>!
+              </>
+            )}
+
+
+
+
           </Typography>
 
 
-          {/* <Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography> */}
+         {/*  <Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography>  */}
 
           <Tooltip arrow title={<Typography variant="caption" style={{ color: "white", marginRight: 15, fontWeight: "bold" }}>Sua assinatura: {companyDueDate}</Typography>}>
             <EventAvailableIcon style={{ color: "white", marginRight: 15, }} />

@@ -100,7 +100,7 @@ const App = () => {
                 },
                 "&::-webkit-scrollbar-thumb": {
                     boxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.3)',
-                    backgroundColor: "#00008B",
+                    backgroundColor: "#fff",
                 },
             },
             scrollbarStylesSoft: {
@@ -108,7 +108,7 @@ const App = () => {
                     width: "8px",
                 },
                 "&::-webkit-scrollbar-thumb": {
-                    backgroundColor: mode === "light" ? "#00008B" : "#333333",
+                    backgroundColor: mode === "light" ? "#fff" : "#333333",
                 },
 
             },
@@ -118,22 +118,22 @@ const App = () => {
                     borderRadius: "8px",
                 },
                 "&::-webkit-scrollbar-thumb": {
-                    backgroundColor: mode === "light" ? "#00008B" : "#fff !important",
+                    backgroundColor: mode === "light" ? "#fff" : "#fff !important",
                     borderRadius: "8px",
                 },
             },
 
               palette: {
                  type: mode,
-                 primary: { main: "#0000FF" },
-                 textPrimary: mode === "light" ? "#0000FF" : "#FFFFFF",
-                 borderPrimary: mode === "light" ? "#0000FF" : "#FFFFFF",
+                 primary: { main: "#633c8e" },
+                 textPrimary: mode === "light" ? "#7A7A7A" : "#FFFFFF",
+                 borderPrimary: mode === "light" ? "#633c8e" : "#FFFFFF",
                  dark: { main: mode === "light" ? "#333333" : "#F3F3F3" },
                  light: { main: mode === "light" ? "#F3F3F3" : "#333333" },
                  tabHeaderBackground: mode === "light" ? "#EEE" : "#333",
                  optionsBackground: mode === "light" ? "#fafafa" : "#333",
                  options: mode === "light" ? "#fafafa" : "#666",
-                 fontecor: mode === "light" ? "#0000FF" : "#fff",
+                 fontecor: mode === "light" ? "#7A7A7A" : "#fff",
                  fancyBackground: mode === "light" ? "#fafafa" : "#333",
                  bordabox: mode === "light" ? "#eee" : "#333",
                  newmessagebox: mode === "light" ? "#eee" : "#333",
@@ -148,12 +148,12 @@ const App = () => {
                  total: mode === "light" ? "#fff" : "#222",
                  messageIcons: mode === "light" ? "grey" : "#F3F3F3",
                  inputBackground: mode === "light" ? "#FFFFFF" : "#333",
-                 barraSuperior: mode === "light" ? "linear-gradient(to right, #fff, #00008B, #00008B)" : "#0000FF",
+                 barraSuperior: mode === "light" ? "#633c8e" : "#0000FF",
                  boxticket: mode === "light" ? "#EEE" : "#333",
                  campaigntab: mode === "light" ? "#fff" : "#333",
-                 drawerIcons: mode === "light" ? "#00008B" : "inherit",
-                 drawerBackground: mode === "light" ? "#fff" : "#333",
-                 drawerText: mode === "light" ? "#00008B" : "#fff",
+                 drawerIcons: mode === "light" ? "#fff" : "inherit",
+                 drawerBackground: mode === "light" ? "#633c8e" : "#333",
+                 drawerText: mode === "light" ? "#fff" : "#fff",
 
                  // background: '#10175b',
                  // color: 'white',

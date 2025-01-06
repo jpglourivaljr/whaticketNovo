@@ -51,16 +51,16 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     "&.MuiButton-root": {
       margin: "20px 0px 16px",
-      backgroundColor: "rgb(52, 137, 255)",
+      backgroundColor: "rgb(99, 60, 142)",
       borderRadius: " 30px",
     },
 
     "&:hover": {
-      backgroundColor: "#285ec9",
+      backgroundColor: "#633c8e",
       boxShadow: "none",
     },
 
-    backgroundColor: "rgb(52, 137, 255)",
+    backgroundColor: "rgb(99, 60, 142)",
     margin: theme.spacing(3, 0, 2),
     WebkitTextFillColor: "#FFF",
   },
@@ -127,14 +127,14 @@ const SignUp = () => {
     <div className="geral-signup">
       <div className={"container-signup"}>
         <div className={"paper"}>
-          <img src={logo} alt="Whats" className="img-logo-signup" />
+        {/*  <img src={logo} alt="Whats" className="img-logo-signup" /> */}
 
-          <h4 className="h4">⚡ Cadastre-se</h4>
+          <h4 className="h4">Cadastre-se</h4>
           <div>
             <span className="span">
-              👋🏻 Comece seu <b>teste GRATUITO</b> de 3 dias do Whaticket em
+              Comece seu <b>teste GRATUITO</b> de 3 dias com a JPG Soluções em Informática em
               apenas 3 etapas!{" "}
-              <b>Não se preocupe, nós não pedimos dados do seu cartão.</b> 💳
+              <b>Não se preocupe, nós não pedimos dados do seu cartão.</b>
             </span>
           </div>
           {/*<Typography component="h1" variant="h5">
@@ -248,7 +248,7 @@ const SignUp = () => {
                   margin="dense"
                   fullWidth
                   variant="contained"
-                  color="primary"
+                  color="#633c8e"
                   className={classes.submit}
                 >
                   {i18n.t("signup.buttons.submit")}
@@ -260,7 +260,7 @@ const SignUp = () => {
                       variant="body1"
                       component={RouterLink}
                       to="/login"
-                      style={{ color: "#3489ff", fontWeight: 500 }}
+                      style={{ color: "#633c8e", fontWeight: 500 }}
                     >
                       {i18n.t("signup.buttons.login")}
                     </Link>
@@ -274,18 +274,18 @@ const SignUp = () => {
           <p className="p">
             Copyright ©{" "}
             <a href={"#"} target={"_blank"}>
-              Canal_Leandro_Reis{""}
+              JPG Soluções em Informática{""}
             </a>{" "}
             2024{" "}
           </p>
           <p className="p">
-            This site is protected by reCAPTCHA Enterprise and the Google{" "}
+          Este site é protegido pelo reCAPTCHA Enterprise e pelo Google{" "}
             <a href={"https://policies.google.com/privacy"} target={"_blank"}>
-              Privacy Policy
+            Política de Privacidade
             </a>{" "}
-            and{" "}
+            e{" "}
             <a href={"https://policies.google.com/terms"} target={"_blank"}>
-              Terms of Service
+            Termos de Serviço
             </a>
           </p>
         </div>

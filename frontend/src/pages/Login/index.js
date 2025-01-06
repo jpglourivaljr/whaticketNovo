@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { i18n } from "../../translate/i18n";
 import "./style.css";
 import { AuthContext } from "../../context/Auth/AuthContext";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_branca.png";
 import { Grid } from "@material-ui/core";
 
 const Copyright = () => {
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100vw",
     height: "100vh",
-    background: "linear-gradient(to right, #0000FF , #0000CD , #00008B)",
+    background: "rgb(99, 60, 142);",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 100%",
     backgroundPosition: "center",
@@ -63,15 +63,15 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     "&.MuiButton-root": {
       margin: "20px 0px 16px",
-      backgroundColor: "rgb(52, 137, 255)",
+      backgroundColor: "rgb(99, 60, 142)",
       borderRadius: " 30px",
     },
     "&:hover": {
-      backgroundColor: "#285ec9",
+      backgroundColor: "#633c8e",
       // boxShadow: "none",
     },
 
-    backgroundColor: "rgb(52, 137, 255)",
+    backgroundColor: "rgb(99, 60, 142)",
     margin: theme.spacing(3, 0, 2),
     WebkitTextFillColor: "#FFF",
     width: "50%",
@@ -114,18 +114,18 @@ const Login = () => {
           <p>
             Copyright ©{" "}
             <a href={"#"} target={"_blank"}>
-              Leandro_Reis{""}
+              JPG Soluções em Informática{""}
             </a>{" "}
             2024{" "}
           </p>
           <p>
-            This site is protected by reCAPTCHA Enterprise and the Google{" "}
+          Este site é protegido pelo reCAPTCHA Enterprise e pelo Google{" "}
             <a href={"https://policies.google.com/privacy"} target={"_blank"}>
-              Privacy Policy
+            Política de Privacidade
             </a>{" "}
-            and{" "}
+            e{" "}
             <a href={"https://policies.google.com/terms"} target={"_blank"}>
-              Terms of Service
+            Termos de Serviço
             </a>
           </p>
         </div>
